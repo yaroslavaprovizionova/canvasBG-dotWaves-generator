@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WavesAnimation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="content-wr">
+
+    <!-- CANVAS BLOCK -->
+    <div class="canvas-wr">
+      <canvas></canvas>
+    </div>
+
+    <!-- ASIDE BLOCK -->
+    <aside>
+      <div class="control-wr">
+
+        <form name="canvasValues" action="">
+          <div class="form-item-wr">
+
+            <div class="bg-color-wr form-item">
+              <p class="hide">Скрыть</p>
+              <label for="bgColorChange">Цвет фона</label>
+              <div class="form-input-wr">
+                <input type="color" name="bgColorChange" id="bgColorChange" value="#aa4b41">
+              </div>
+            </div>
+
+            <div class="dot-color-wr form-item">
+              <p class="hide">Скрыть</p>
+              <label for="dotColorChange">Цвет точек</label>
+              <div class="form-input-wr">
+                <input type="color" name="dotColorChange" id="dotColorChange" value="#2d3033">
+              </div>
+            </div>
+
+            <div class="space-diameter-wr form-item">
+              <p class="hide">Скрыть</p>
+              <label for="spaceDiameterValue"> Диаметр пространства точки</label>
+              <div class="space-diameter-value form-input-wr">
+                <input  name="spaceDiameterValue" id="spaceDiameterValue" type="text" value="55" required>
+                <div class="press">
+                  <label for="spaceDiameterValue" class="spaceDiameter1 arrowUp"> </label>
+                  <label for="spaceDiameterValue" class="spaceDiameter-1 arrowDown"> </label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="dot-diameter-wr form-item">
+              <p class="hide">Скрыть</p>
+              <label for="dotDiameterValue"> Диаметр точки</label>
+              <div class="dot-diameter-value form-input-wr">
+                <input  name="dotDiameterValue" id="dotDiameterValue" type="text" value="45" required>
+                <div class="press">
+                  <label for="dotDiameterValue" class="dotDiameter1 arrowUp"> </label>
+                  <label for="dotDiameterValue" class="dotDiameter-1 arrowDown"> </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="waveLength-wr form-item">
+              <p class="hide">Скрыть</p>
+              <label for="waveLengthValue"> Длина волны</label>
+              <div class="waveLength-value form-input-wr">
+                <input  name="waveLengthValue" id="waveLengthValue" type="text" value="300" required>
+                <div class="press">
+                  <label for="waveLengthValue" class="waveLength10 arrowUp"> </label>
+                  <label for="waveLengthValue" class="waveLength-10 arrowDown"> </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="speed-wr form-item">
+              <p class="hide">Скрыть</p>
+              <label for="speedValue"> Cкорость</label>
+              <div class="form-input-wr">
+                <input  name="speedValue" id="speedValue" type="text" value="0.01" required>
+                <div class="press">
+                  <label for="speedValue" class="pressSpeed arrowUp"> </label>
+                  <label for="speedValue" class="pressSpeed-1 arrowDown"> </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="direction-wr form-item">
+              <p class="hide">Скрыть</p>
+              <label for="directionWaves">Направление волны</label>
+              <div class="form-input-wr form-select-wr">
+                <select  name="directionWaves" id="directionWaves" required>
+                  <option  selected value="1"> От центра</option>
+                  <option value="0">Остановить</option>
+                  <option value="-1">В центр</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="dotsDisplacement-wr form-item">
+              <p class="hide">Скрыть</p>
+              <label for="dotsDisplacement">Расположение точек</label>
+              <div class="form-input-wr form-select-wr">
+                <select  name="dotsDisplacement" id="dotsDisplacement" required>
+                  <option  value="0"> Линейное</option>
+                  <option  selected value="1">Диагональное</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </aside>
+  </div>
+  
+  <!-- ANIMATION CHANGE BLOCK -->
+  <div class="animation">
+    <div class="animation-item animation-item-1"> </div>
+    <div class="animation-item animation-item-2"></div>
+    <div class="animation-item animation-item-3"></div>
+    <div class="animation-item animation-item-4"></div>
+    <div class="animation-item animation-item-5"></div>
+  </div>
+
+  <script src="js/service.js"></script>
+  <script src="js/animated.js"></script>
+  <script src="js/event.js"></script>
+</body>
+</html>
